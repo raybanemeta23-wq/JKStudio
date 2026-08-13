@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AromaCraft - Interactive Perfumery Web App Prototype</title>
+
+    <!-- PWA: manifest & icons -->
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkFyb21hQ3JhZnQgLSBJbnRlcmFjdGl2ZSBQZXJmdW1lcnkgU3VpdGUiLCAic2hvcnRfbmFtZSI6ICJBcm9tYUNyYWZ0IiwgImRlc2NyaXB0aW9uIjogIlBhbmR1YW4gbWVyYWNpaywga2Fsa3VsYXRvciBkb3Npcywgc2NlbnQgbWF0Y2hlciwgZW5zaWtsb3BlZGlhIHNvbHZlbiwgZGFuIGp1cm5hbCByZXNlcCBwYXJmdW0uIiwgInN0YXJ0X3VybCI6ICIuIiwgInNjb3BlIjogIi4iLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwgImJhY2tncm91bmRfY29sb3IiOiAiIzA5MGQxMiIsICJ0aGVtZV9jb2xvciI6ICIjMGYxNzJhIiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUFBQUFEQUNBWUFBQUJTM0d3SEFBQUxDVWxFUVZSNG5PM2RlMnllVlIwSDhOODdid3d5d2NsdDNLWURkQmluUWhSRUYyUUpvQWtoZUtGcnU2MWQxM1dqNjdwV295UkdFbU1NZ2NSb3BQZHVLNnl0MjNxYmJpQ0R1WkVNY0RJdXk4Q05qS21BQ3NLNFdjRUdpcmZWUDhvNzF2YTlQSmR6enZkY3ZwL2srVXZwOCsxNWY5LzNQTTk3V1ROaW1la3pabzZoTTVBK295UERHWFNHNDBIRGNOaEpCRnNLNHlmbTBGTWhwc3RnN0dRY2ZJckRWQkcwbjRTRFQybm9Mb0sySDg3Qko1VjBGVUg1RCtYZ2swNnFpekJONVEvajhKTnVxbWRNU1pzNCtJU2dZamRJdlFOdytBbEZ4ZXlsS2dDSG45RFN6bURpQW5ENHlSWnBaakZSQVRqOFpKdWtNeG03QUJ4K3NsV1MyWXhWQUE0LzJTN3VqRVl1QUllZlhCRm5WaU1WZ01OUHJvazZzMFVMd09FblYwV1pYYVVmaFNCeVRjRUM4Tm1mWEZkc2h2TVdnTU5QdmlnMHk3d0VvcURsTEFDZi9jazMrV2FhT3dBRmJVb0IrT3hQdnNvMTI5d0JLR2dUQ3NCbmYvTGQ1QmwvUHlwSUtGNXYrbGZxbjNGcTQ0Y1VKS0Zjam4ybmtzLys2YnlxWU5Eak9wM0ZTQ3o3ZldJV0lLR1htLzZOampERm1ZMGZSRWR3Qmd1UXdKR20vNkFqUkRhcjhRUG9DRmFiVUFBT2YzNHZOdjBYSFNHMXN4dDVxNWZMNk1od2hnWEk0NFdtLzZFaktIZHU0L3ZRRWF6Q0FrenlmUE5SZEFSanptdmdXMEFzd0x2K0V0RGdUL2F4Z0lzUWZBR2Vhdzd5MTg1cFRvTlZmN25JaU5HUjRVd20xT0YvdGhtZHdEN25ONkFUbUJkY0FmN1VITjR6WFZ3WE5vUXpFc0VVNEE4dDRWN3JKdlhKTmY3Zkd3VlJnTU10ZlBrdnFibHIvSHM1K0hqZUYrQlFDOThFU3V0VGE5eC9NekFmYnd2d0ZBZGZ1VTk3V0FRdkMzQ3doWitEMFdYZUduYytEeFdGZHdYNGZTcy9FYW5iWit2dCt5UnNVbDRWNElsV2ZqN2VsSXZyelgvL1FRY3ZDckMvOVFSMGhHQmRVdjhPT2tJcXpoZGdYK3QwZElUZ2ZiNStGQjBoTWFjTDhGanJpZWdJOUs1TDY5OUdSMGpFMlFJODJzYmh0ODFscTkwcmdaTUYyTnQyRWpvQzVYSDU2cmZRRVdKeDh0MmlvMnIrd0QyUmV6dkFucllaNkFoVXhQelZJK2dJa1RsVmdJZmFQb3lPUUJGZHNmcWY2QWlST0ZPQUI5cFBSa2VnbUs2c2V4TWRvU2duQ3JDNy9SUjBCRXBvUWQwYjZBZ0ZPWEVUN1AvWE1nakYraDFnVi90SDBCRW9wYXZyL29HT2tKZlZCZGpaUGhNZGdSUzVwbTRZSFNFbmF3dXdvK09qNkFpazJOZFcvUjBkWVFwcjd3SDRaaGVaWU9VT3NMM2pOSFFFMHVUYVZhK2hJMHhnNVE3QVozOHl4Ym9kNEs2TzA5RVJTTFByVjcyS2puQ01WUVhZMW5rR09nSVo4dlhhVjlBUlJNU3lTeUJmTDMyK1dmdHk0di8yVjUxbktreENrMWxUZ0MyZHMvaU9idzYrUGlsczZad2xOOVFlUWNld3B3QmpuajdRYVhGZDlMS2lBQU9kWi9QWlB3OWZkd0NSOGNlOXRQWkZhQVlyQ25BMDQrK0RuQmJYUmk4ckNtRE55MUFXNHRyb0JTL0F4clhuOHZLbkFKOHZnVVRHSC84bE43NEFPeis4QUw0L3dHbHhmZlNDL3RtVW5yV3paVXd5M2g5cG9MT2JPSHJXemxZMFVmRkJkd0RlNEJYSE5kSUxXZ0MreGwwYzEwZ3ZXQUc2MXMzaHpXOEVvZHdEZEsyYkl6VXJuek4rWGxnQk9QelJjSjMwZ2hXQVczczBYQ2U5SUFYb1dIY0JuOWtpQ3VVU1NHUjhMbGF0Zk1ib09TRUY0Q3NiMFhHdDlJSVVnTnQ2ZEZ3cnZUQTdBQi9VeUxoV2Voa3Z3TzNyNS9MNlA0YlFDbkQ3K3JueTdSV0hqWjNQZUFINDZjWjR1RjU2R1M5QWFEZDEzNjE1T3RWLy81MFZoK1ZuWFJjcFNrT1RtUzlBWUZ1NkNsd3pmWXgvR2hUOXlVT1R4MDAxaDVTczJVMDFoK0MvaThuREpPNEFqdUM2NldHMEFMZDJ6UXZtRmFBZjFCeFUrdk8rWC9PVTNObzFUK25QSk1NRkdBdnNCbGcxcnA5NlJ1OEJqZ1p5M0x6OGdLb2xtK0RtNVFmZ3Y1dUp3eVNqT3dDdlk5UGpHcXBsOWhLSUQxNXFYRU8xdUFNbzl1UGxUMmo5K1Q5YS9xVDg4STZMdFo0akpHWUx3SnM0SmJpTzZoaTlDVWEvd2FMN3VLVjZ2NUYxdktWNlAveDM1UnRoQ1lSd0NXUUsxMUlOdmd5cTZMaXRlcC9DbFNydXR1cDk4TitaTDRQR3hGY3cxT0o2cHNlYllBVit1dXd4eUhsL1V2MjRmRy9EcFpCeis0TDNBSTdqbXFiRFN5REhjVTNUNFE2UVV0T3l2ZER6LzN6Wkk5SzQ0WEpvQnBjWkxnRHB3SFZOamgrSFRxRzE2bUYwQkJFUmFWbTJWK3E3djRTTzRTU2pCV2l0ZWxqcXVyOXM4cFRCOFBIeTBnUitKVEtoenFvOTZBZ1R0RmY5VG1xNzU2TmpPQWZ3N3dMNVVRQWJjVzNqNHc2UXdQcXFoOUFSY2xwYjlWdFowWDBGT29aVCtBOWp4VkNiZVVsRVJGYjJYZ2hPVXNnUkVSSHBIRHNMbk1NTi9LY1JQY1YxanNaNEFlNWMrcUJVOVZ4cCtyVEJjZlZTczN2cEEwYlB4MzhlUFlhV3NYT2tkK2x1ZEl5aUtuc1dvQ000QS9LSHN0SGZPRXA2dUREOElpSzlTM2ZEMThxRmI0T0o4RThrZVl0ckhFMW0rb3laa1B1bDh0NnJFS2ROcksveWZuU0UyTGpHeGZIUHBIcU1hMXdjNUI1QUJQKzkwemhIZitVdVRhdWdWMy9sTHZqYTJmcGQ0Q3pZRGpCWXVVdHU2TDBHZGZwZ3VQS0syNWJLblpEenduWUFrZkdQUjl0K29CNFlWYlpVN29TdllaUURCYllEaUxqejdPUTZybk4rMEIxZ2E4VU8rT3ZPdHIwdXJRTjZEWXNkV3l0MndOWUdXZ0NSOFdjblc0OXRGZmVobDBlSmJSWDN3ZGV5MElFRUw4RGRGZmZDSHdBYkh4alYwR3VaNzdpNzRsN291c0FMSURMK3lVWGJqbnNxdG12OW5VMjdwMkk3ZkUxekhXalFtK0Fzdm0xdkJ0ZDVLdGhISVNiNzZzYnIwQkdPK2MyU1g2TWphTU4xbnNpS0hVQ0ViOXVid25XZXlKb2RRRVRrcW8zWG95UEkvVXZ1UWtmUWp1djhIbXQyQUJHK1lXTUsxL2s5VnUwQUlpSUxObjBESFlFMDI3MTRLenJDTWRZVlFFVGtLeXlCdHg2MGFQaEZMTHNFeXVJV1RhWll1UU9JaU16ZjlDMTBCRkpzeitKZm9pTk1ZZVVPSU1KZGdNeXdkZ2NRRWZuaTVoSjBCRkxra1VWRDZBZzVXVjBBRVpITE5pOUVSNkNVSGwwMGlJNlFsL1VGRUJINXd1WlNkQVJLNlBGRkErZ0lCVmw3RDNBOC9na2cwc1dKSFVCRTVKTE5aZWdJRk5QK1JmM29DRVU1VXdBUmtjLzFsYU1qVUVSUGx2ZWhJMFRpVkFGRVJEN1R0d2dkZ1lvNFVMNFpIU0V5NXdvZ0lqS3ZiekU2QXVWeHNId1RPa0lzVHR3RVQ4WTN5VWdWSjNjQUVaR0wraXJRRVdpU3A4dC9nWTRRbTdNRkVCR1oyODhTMk9Kd21YdkRMK0o0QVVSRVB0RmZpWTRRdkQrVzlhSWpKT1o4QVVSRUx1aGZpbzRRckdmS2V0QVJVdkdpQUZubjkxZWhJd1RqMmJKdWRBUWx2Q3FBaU1qSCs1ZWhJM2p2ejJVYjBCR1U4YTRBSWlLekI2clJFYnoxMTlJNzBSR1U4cklBSWlMbkRTeEhSL0RPODZWM29DTW81MjBCc3M1aEVWTDdtNGVEbitWOUFVUkV6aHFvUVVkdzFrdWxYZWdJV2dWUkFCR1JXUU1yMEJHY2M2UjBQVHFDZHNFVUlPdU13WlhvQ05aN1plRTZkQVJqTWlJaW9aVkFST1Mwd1J2UkVhenoyc0sxNkFoR2pZNE1aNEl0Z0lqSXFZTzE2QWpXZUgxaEp6cUNjY0VYSUd2bTRDcDBCSmpoaFIzb0NEQXN3Q1NuQkZTRU53SWUvQ3dXb0lDVGgrclFFWlI3czZRZEhjRXF4d29nd2hMa00yTm9OVHBDYWlNbGJlZ0kxaGtkR2M2SWlMQUFNWncwVkkrT0VObGJKYTNvQ0ZaakFWSTZjV2dOT3NJVWI1ZTBvQ000WTBvQlJGaUNORTRZYWpCK3puZEttbzJmMHdmWjRSZGhBU2hBeHhkZ1dyNy9nY2hIazJkOFdyNy9JMUVJcGhTQXV3RDVLdGRzY3dlZ29PVXNBSGNCOGsyK21lWU9RRUhMV3dEdUF1U0xRck5jY0FkZ0NjaDF4V2FZbDBBVXRLSUY0QzVBcm9veXU1RjJBSmFBWEJOMVppTmZBckVFNUlvNHN4cnJIb0FsSU52Rm5kSFlOOEVzQWRrcXlXd21laFdJSlNEYkpKM0p4QytEc2dSa2l6U3ptT3A5QUphQTBOTE9ZT28zd2xnQ1FsRXhlMHFIbDErcEpCTlVQdWtxL1NnRWR3UFNUZldNYVJ0WTdnYWtrcTRuViszUDJDd0NwYUg3cXNMWUpRdUxRSEdZdXB3MmZzM09JbEFocHU4am9UZXRMQU9KWUY4OHNlNVZHNWJDYjdhOVV2aC9VV2xXamQ0SjVLUUFBQUFBU1VWT1JLNUNZSUk9IiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBY0hVbEVRVlI0bk8zZGViUW1kMWtuOExvUnhhZ1JqR3doQ3lFUVFRaXlEYUtEREFQRG9DRE9aSlRzM1ozZXNtL3FVUmxIajRJekxxZ2pwdE9kWHBLUXRaUE9nZ1JDZ0VBZ01oQWdCTUtXQkJBRkRQdGlDN2JhNHRielI2ZVQyOG05OTMycjNxcDZmc3ZuYzA2ZGs1UDhrZWV0Vzc5NnZ2WDg2cjUzcmlGSisrNjMvNjdvR2dENnNIUEg5cm5vR25nd1A1UWdHanpBYmdKQ0RDZDlCSm85UUR0Q3dmQ2M0QUZvK0FEOUVnajY1NFQyUU1NSEdKZEFNRHNuc0NOTkh5QU53a0EzVGxvTG1qNUEyb1NCNlRsUkUyajZBSGtTQnBibTVDeEM0d2NvZ3lDd01DZGxIazBmb0d6Q3dQMmNpRWJqQjZpTklGQjVBTkQ0QWVwV2N4Q284b05yL0FETVYyTVFxT29EYS93QUxLV21JRkRGQjlYNEFXaWpoaUN3VDNRQlE5UDhBV2lyaHQ1UmJNS3A0WWNId1BCS25RWVU5NkUwZmdDR1VGb1FLR29MUVBNSFlDaWw5WmdpMGt4cFB4UUEwbGJDTkNEN0NZRG1EOERZU3VnOVdRZUFFbjRBQU9RcDl4NlU1UWdqOTVNT1FGbHkzQkxJYmdLZytRT1FtaHg3VTFZQklNY1RERUFkY3V0UldZd3NjanVwQU5RdGh5MkI1Q2NBbWo4QXVjbWhkeVVkQUhJNGdRQ3drTlI3V0xJQklQVVRCd0NUcE56TGtnd0FLWjh3QUdnajFaNldYQUJJOVVRQlFGY3A5cmFrQWtDS0p3Z0ErcEJhajBzbUFLUjJZZ0NnYnluMXVpUUNRRW9uQkFDR2xFclBDdzhBcVp3SUFCaExDcjB2TkFDa2NBSUFJRUowRHd3TEFORWZIQUNpUmZiQ2tBQ2crUVBBYmxFOWNmUUFvUGtEd040aWV1T29BVUR6QjRDRmpkMGpSd3NBbWo4QUxHM01YamxLQU5EOEFXQTZZL1hNOE84QkFBREdOM2dBOFBRUEFPMk0wVHNIRFFDYVB3QjBNM1FQSFN3QWFQNEFNSnNoZTZsM0FBQ2dRb01FQUUvL0FOQ1BvWHBxN3dGQTh3ZUFmZzNSVzNzTkFKby9BQXlqN3g3ckhRQUFxRkJ2QWNEVFB3QU1xODllMjBzQTBQd0JZQng5OVZ4YkFBQlFvWmtEZ0tkL0FCaFhINzNYQkFBQUtqUlRBUEQwRHdBeFp1M0JuUU9BNWc4QXNXYnB4YllBQUtCQ25RS0FwMzhBU0VQWG5td0NBQUFWYWgwQVBQMERRRnE2OUdZVEFBQ29VS3NBNE9rZkFOTFV0a2ViQUFCQWhhWU9BSjcrQVNCdGJYcTFDUUFBVkdpcUFPRHBId0R5TUczUE5nRUFnQW9KQUFCUW9Za0J3UGdmQVBJeVRlODJBUUNBQ3MwdDlSODkvVU0rdm5udWQwYjdmejNpbkllTzl2OEN1dHU1WS91aWZWNEFnTVI5WThURzNyZEhDZ29RU2dDQXhIMDk0eWJmMWFPRUF4aGNwd0NnK2NNd2FtejIweElLb0grTGhRQUJBQWIwdFhQL09icUU3RDM2bk8rSkxnR3lKZ0RBQ0w2cTRRL3VNUUlCdE5JcUFHaitNQjBOUDU1QUFKTXRGQUlFQUdqcEsrZitTM1FKTE9LQWM3NDd1Z1JJa2dBQUhXajQrUklJWUxlcEFvRG1EMDN6WlUyL09JOFZCcWpjQTBPQUFBRDMrdEs1L3hwZEFpTTU4SnlIUkpjQW94TUFZQjVOSDJHQVdnZ0EwRFRORnpWK0h1QWdRWURDTFJrQU5IOUs5b1Z6L3kyNkJESng4RG5mRlYwQ0RHSitDQkFBS040WDFtbjhkSFB3MllJQVpSRUFxTUk5R2o4OU9VUVFvQkFDQU1XNlo5Mi9SNWRBNFE0NWU1L29FcUN6QlFPQTVrL08vbHJqWjJTUEV3VEkxSjRRSUFDUXRjOXIvQVE3VkJBZ013SUFXZnY4T3BjcmFUbjA3RVgvdUNva1JRQWdTNS9UK0VuYzR3VUJFaWNBa0pYUGF2eGs1akJCZ0VUdEZRQTBmMUwxMlhYUkZjQnNEanM3dWdKNHNKMDd0czhKQUNUcnJ6Ui9DdkVFSVlERUNBQWtTZU9uVklJQXFSQUFTTXBmcnJOblNoMmVlTFpiTHJFRUFKTHdHWTJmU2gwdUNCQms1NDd0Yzc3QmdsQ2FQelZ6L1JQSkJJQVFmM0dlR3gvTTl5Tm51UTB6SGxzQWhQajBlUVpQc0pBbm5lV3JyUm5IemgzYjUrWTBmOGFpOGNOMEJBSEdJQUF3aWs5cC90REtrNFVBQmlZQU1LaFBuZmRkMFNWQTFwNTgxcjlGbDBDaEJBQUc4MG5OSDNyeG8wSUFBeEFBNk4zZEdqOE00aW1DQUQwU0FPalYzZWM5SkxvRUtOcFR6dnJYNkJJb2hBQkFiKzdTL0dFVVR4VUM2SUVBd016dTFQZ2h4QkdDQURNUUFKakpuZWQ5ZDNRSlVMVWp6dnFYNkJMSWxBQkFaNS9RL0NFSlR4TUM2RUFBb0RXTkg5SWtDTkNHQUVBckgxLy9QZEVsQUV2NHNUUC9PYm9FTWlFQU1MV1BhZjZRaGFjTEFVekJGN1F6RmMwZjhtRzlNZzBUQUNiNjZQcUhScGNBZFBDTU03OFRYUUlKRXdCWTFFYzBmaWpDTXdVQkZtQUxnQVZwL2xBTzY1bUZtQUR3SUhlcy85N29Fb0FCUE92TWY0b3VnWVNZQUxBWHpSL0taWDB6bndrQTkvbXdtd05VNGRrbUFUUUNBUGY2MFBwOW8wc0FSdlFmenR3WlhRTEJiQUdnK1VPRnJIdE1BQ3AzdTVzQVZPMDVKZ0hWTWdHb21PWVB1QS9VeXdTZ1VoOWMvMzNSSlFBSitmRXovekc2QkVZbUFGVG90ZzJhUC9CZ3p6MURDS2lKTFlES2FQN0FZdHdmNm1JQ1VKRVBiUGorNkJLQURQekVHZjhRWFFJakVBQXE4WDdOSDJqaEo0V0E0dGtDcUlEbUQ3VGx2bEUrRTREQ3ZXL0REMFNYQUdUc1A1N3g5OUVsTUJBVGdJSnAvc0NzM0VmS1pRSlFxRnN0V3FCSHp6TUpLSTRBVUtEM2J0Z3Z1Z1NnUUQ5MXhvN29FdWlSTFFBQXFKQUpRR0hlNCtrZkdORHpUUUdLSVFBVTVQOXQrTUhvRW9BSy9LY3ovaTY2QkhwZ0M2QVFtajh3RnZlYk1wZ0FGT0RkRmlNUTRBVW1BVmtUQURMMzd2TWZGbDBDVUxFWG5QN3Q2QkxvNkNIUkJUQWI2UTJBTGt3QU1uYUxwMzhnQVM4MEJjaVNBSkNwVzg1L2VIUUpBUGQ1NGVuZmlpNkJsZ1NBREwxTDh3Y1M5Q0loSUN2ZUFjaVF4QWJBckV3QU12UE84MzhvdWdTQVJmMlgwLzgydWdTbUpBQms1R2JOSDhqQWk0V0FMUGdtd0V4by9rQXUzSy95NEIyQVRPeHE1cUpMQUtBZ3RnQXk4UGJ6OTQ4dUFhQzFsNXkrUGJvRWxtQUxJSEdhUDVBcjk2KzAyUUpJblBFTUFFT3dCWkN3dDIzODRlZ1NBR2IyTTZmOVRYUUpMTUFXUUtJMGY2QVU3bWRwc2dXUUtHTVpBSVprQ3lCQmI5MzRpT2dTQUhyMzB0TytHVjBDOHdnQWlYbUw1ZzhVN0dWQ1FESnNBU1JHR2dOZ0RDWUFDYmx4NHlPalN3QVkzTStlOW8zb0VtZ0VnR1M4V2ZNSEt2SnlJU0NjTFlCRVNHRUFqTWtFSUFFM2JIeFVkQWtBby91NTA3NGVYVUxWVEFBU0lJRUJNRGJmQkJqc1RaNytnVXE1LzhVeUFRaTJxNW1MTGdHQUNua0hJTkQxR3g4ZFhRSkF1Q05QKzFwMENWVVNBSUpjdjBuekI5amp5Rk9GZ0xIWkFnaGk5RTliLytQVXIwYVhNTFUzYkhwTWRBbkFCRjRDRE9EbUNMQTM5OFh4bVFBRXNPZEM2Vnpqa0Q0QllHU3YzM1NBbXlQRnM4VkZGNi9mZEVEekM2ZCtKYnFNYXRnQ0FJQUttUUNNNkRwUC8xVENkVTVYMTIwNm9IbUZLY0FvQklBUkdZdFNDOWM2cE04V3dFaXUzZlRZNkJJQXN1QitPUTRUZ0pFWWlWSVQxenVrendSZ0JOZElzd0N0dUc4T3p3UmdCUFpEcVkxckh0SW5BQXhzMjZZRGpVT3BqbXVlUG16YmRHQno3S2xmaWk2aldMWUFBS0JDSmdBRDJ6Vm5GRXA5WFBlUVBnRmdRRmR1UHNnb2xDcTU3dW5MbFpzUGFvNC81WXZSWlJUSkZnQUFWTWdFWUNCYk54L3NLWWhxK1MwQStyUjE4OEhOQ2FkOElicU00cGdBQUVDRlRBQUdjSVduZnlybitxZHZWMncrdUZsbUN0QXJBV0FBeHAvVXpocUE5TmtDQUlBS21RRDA3TExOaHhoL1VqMXJnQ0ZjdHZtUVpzVXA5MFNYVVF3Qm9HZEduMkFkUUE1c0FmVG8wczJQaXk0Qm9HanVzLzB4QWVpUnNTZnNaaTFBK2dTQVhobDd3bTdXQXFST0FPakp4VnNPOWRRRDk5cWwvek9naTdjYzJxdzYrZlBSWldSUEFPaUo1Zy8zc3g0Z2ZRSkFienp5d1Ayc0IwaWRBTkNEaTdZODNoTVB6R005TUxTTHRqeStXWFB5NTZMTHlKb0EwQU0zTzlpYk5RSHBFd0I2WWR3SmU3TW1JSFVDd0l3dTJIS1lweDE0QUd1Q01WeXc1YkRtcEpNL0cxMUd0bndUSUFCVXlBUmdScjd6SEI3TXVvRDBDUUF6TXVxRUI3TXVJSDIyQUdhd2Vjc1Rva3NBcUpyN2NIY21BRFB3bEFNTHN6WWdmUUxBRE94endzS3NEVWlmTFlDT05tNTVZblFKQURUdXgxMlpBSFRrcjUzQjRxd1BTSjhBMEprN0hDek8rb0RVQ1FBZGVja0pGbWQ5UVBvRWdBN1dYM0M0R3h3c3dmcGdiT3N2T0x3NTg2VFBSSmVSRlFHZ0UrTk5XSm8xQXFrVEFEcndkQU5MczBZZ2ZYNE5FQUFxWkFMUTByb0xudVRwQmlid1JVQkVXSGZCazVxelQvcDBkQm5aRUFCYTB2eGhNdXNFMG1jTEFBQXFaQUxRa3RFbUVYN3hwRTlGbDlES09TZDl1dm5UQzU0Y1hRYXdCQUdnSmFOTm1JNjFBbW16QmREQ2F6M1JFT0NYTW52NjN5UFh1c21iKy9UMFRBQmEyRFZuL0E5dFdET1FMaE1BU05ndnIvMWtkQWt6eWIxK0tKa0pRQXYyTktFOTZ3YlNKQUMwNERjQW9EM3JCdEprQzJCS2YzemhVNkpMb0RLL3N2YnU2Qko2VWNybklCL3UxOU14QVppU01TWjBaLzFBZWdTQUtSbGpNcVpmVzN0WGRBbTkrdFcxZHpkL2VPRlRvOHNBNXJFRkFBQVZNZ0dZa2hFbVkzbGxZVS8vZS96YTJydWExNWdDUURKTUFBQ2dRaVlBVS9JT0FHUDRuMnZ2akM1aFVLOWNlMWZ6QnhjZUVWMEcwQWdBVS9uOUM0K3dCUUE5c1pZWXcrOWZlRVR6NjRVSDZsblpBZ0NBQ3BrQVRNSDRuekg4cjdXZmlDNWhGTCsrOXM3bTl5NThXblFaVUQwQllBcTc5SC9vbFRVRjhXd0JRQUorWTAwZFQvOTcxUFo1SVVVbUFGT3dCUUQ5czY0Z2xna0FCUHZOTlIrUExpRkVyWjhiVW1FQ01BVy90Z1REc0xZZ2pnQXdCYU5LR0lhMUJYRnNBVUNnMzFyenNlZ1NRdFgrK1NHU0NjQUVyNzdvNmNhVU1DRHJDMklJQUJNWVVUS1VWNjM1YUhRSlNmanROUjlyWG5YUk02TExnT3JZQWdDQUNwa0FUR0E4eVJCZTdlbC9MNjlhODlIbXQwMEJZRlFDd0VTMkFHQWMxaHFNU1FDWXdBU0F2djNPbW85RWw1Q2tWNi81U1BOYkZ6MHp1Z3lvaGdBd2dRQUE0N0hlWUR3Q3dDUnp4cEl3R3VzTlJpTUFUT0NKaEQ3OW45VjNSSmVRdFArOStvN21OMS8zck9neW9Bb0N3QVFDQUl6TG1vTnhDQUFUR1VuU2o5OWQvZUhvRXJMd3U2dnZhSDdqZGMrT0xnT0tKd0JNNEdrRXhtZmR3ZkI4RXlDTTRQYzgvYmZpZk1Id1RBQW04TGNBSUlhMUI4TVNBQ1l3aW9RWTFoNE15eFlBRE93UFZuOG91b1FzT1c4d0xCT0FDVHlGUUJ6ckQ0WWpBRXhrSDVMdVhyUDY5dWdTc3ZhYTFSOXFYdm02NTBTWEFVVVNBQ2J3QkFLeHJFRVloZ0F3Z1pzUFhmMlJwLzllL09IcTI1dGZOUVdBM2drQWsvampKQkRQT29UZUNRQVRtQURReFIrdittQjBDVVg1bzFVZmJIN2w0aCtQTGdPS0lnQk1JQUJBR3F4RjZKY0FNSkhSSTZUQldvUStDUUFUZU9xZ3JUOVpkVnQwQ1VYNnY2dHVhMzc1NHVkR2x3SEY4RTJBQUZBaEU0QUovRUVTMm5qdHFnOUVsMUMwUDFsMVcvTkxGLzlFZEJsUUJBRmdndGV1K2tEemkyNDRrQXpiY3RBUFd3RFFrei8xOUQ4SzV4bjZZUUl3QmRzQWtCWnJFbVluQUV6QnlCSFNZazNDN0d3QlFBL1dyWHAvZEFsVmNiNWhkaVlBVXpCdWhQUllsekFiRXdDWTBYbXIzaGRkUXBXY2Q1aU5DY0FVZG5uUWdDUlptOUNkQURBRm8wWVdzMkhscmRFbFZHMzl5dmMxWjF6eXZPZ3lJRXUyQUFDZ1FpWUFVOWl3OHRibWRFOFprQ1MvRXNoQ3pqZWRtMGdBbUpKdEFCNW80OHIzUnBkQXMvdEdmOW9sUHhWZEJtVEhGZ0FBVk1nRVlFckdqTXkzeWROL1VqYXVmRzl6cWlrQXRHSUNBQUFWTWdHWWtuY0EyR1B6eXZkRWw4QUNOcTE4YjNQS0pjK1BMZ095SVFCTXlSWUFwTTg2aGVuWkFwalNGazk5Tks2RDFQbjUwRFN1ZzJtWkFMUmdHNkFlSisvemxRWC8vVW1YSFQ1eUpiVDMxUVgvN1paL1AyRGtPaUJ0QWtBTHhvdVFMK3NYOW1ZTEFBQXFaQUxRd3E0NVd3Q1FLK3NYOW1ZQzBNSkZKNzQ3dWdRQWx1QStQVDBUZ0pic0kwS2VyRjNZbXdEUWt0OEVnRHhadTdBM1d3QUFVQ0VUZ0phTUVldXdZZGVCOS8zekpTZitlVndoekdUbHBmODV1Z1JJMXR5KysrMnZwN1YwNHFVdmpDNkJrVng2NGkzUkpUQWo2N1VlMW1zN3RnQUFvRUlDUUFlN0hGVWNuaWJLY09tSnQ0UmZTNDV4RHRyeERrQW4zaWFHdkZpejhFRGVBZWhvK2FVdmlpNkJBVjErNHJ1aVM2Qm4xbXpack5uMlRBQTZrcG9nTDlZczdNMDdBSjNOT1FvOXJ2QWtVYVRkUDlmNDY4c3gxRUZiSmdBZDdYSzlRWGFzVzdpZkNVQkhXMWU4TTdvRUFCcjM0NjVNQUdiZ3U4WExjK1dLbTZOTFlFQmJWN3l6T2Y2eUYwZVhBVWtRQUdiZ3BTTElqM1VMdTlrQ21NRlZuaGFMNHVkWkJ6L25zdmg1ZG1jQ01DTlBFNUFmNnhZRWdKbDVENkFNVjY5NFIzUUpqR2piaXB1Yll5NzdyOUZsUUNoYkFBQlFJUUZnUmxldmVFZjRIOEJ3K0NNaXRCZDl6VGxtUDB6dVppTUE5Q0w2RzdBY3N4elh1SWxVYWZmUFBmNzZjOHh5TUF2dkFQVEFFeVRreWRxbFp2NGFZRTllY2RsTG9rdWdnK3RXdkQyNkJJSlp1M215ZG1kbkF0QWI0eWpJazdWTG5id0QwSlBvbDJFYzdZL3JWdHkwNE0rU3VseTM0cWJ3YTlIUi9tQjJKZ0E5ZWYyS201cWZ2L3lubzhzQU92QlhBdlB5Wjh1Rjl6NllBUFFxK28xWXg3U0hHd2p6N2I0ZTRxOUx4N1FIZlRBQjZKR3hGT1RMK3FVMkpnQTllc1B5dDBXWEFGQTA5OW4rbUFEMHpOOEdTTi8xeTk4YVhRSUplc1B5dHpWSFh2N1M2REpnTkNZQVBidCsrVnZEMzQ1MWVIdVlicUt2VGNmU2gvRGVMd0dBcXJ6UkRZUWx1RDZvaVMyQUFkZ0dnSHhadjlUQ1Z3RVA1T2N1ZjFsMENUekFEY3ZmRWwwQ21iQiswMlA5OXM4V0FBQlV5QmJBUUc1WS9wYm01WmYvYkhRWlFBZTJBZEx5NXVVM1JwZFFKQk1BcXVBR1FodXVGMm9nQUF6b3pjdHZEUCsxR2NmdUE5cUt2bVlkdXc5aGJEaTJBQWEyYTg0b01kcGJscjA1dWdReWRPUHlHNXVYWGZIeTZESmdNQ1lBQUZBaHZ3WTRncGQ2aWdqelZrLy96TWo2aldQOURzc1d3QWk4VVF6NXNuNHBsUzJBRWJ4dDJRM1JKVlRKZWFjUHJxTVl6dnZ3VEFCR1lwOEY4bVg5VWlJVGdKSGNKTTBDVE1YOWNod21BQ095bHppZXR5OTdVM1FKRk9TbVpUYzBMN25pdjBXWEFiMHlBUmpSMjVlOUtmeExOV281b0cvUjEzUXRoL0ErSGdHQTRyekREWVFCdUs0b2pTMkFrYjFqMlp1YUYxL3gzNlBMQURxd2pUZXNtNWU5TWJxRXFwZ0FCSWdlc1pWOHVJRXdwSnVYdlRIOEdpLzVZRndDUUlCM2FsSUFlM0ZmSEo4dGdDQkdpY040MFJWSFJwZEE0VHlwVWdwL0N5RFFpN1llR1YwQ1FMaDNuWEI5ZEFsVkVnQ0N2VkFJQUNwMmkrWWZ4aFpBTUZzQkFFVHdFbUN3UHovaERkRWxBSVJ3LzR0bEFwQUFlekFBak0wN0FJbDR3ZGFmank0QllEVHZQdUhQb2t1b25nbEFJcVF3QU1aa0FwQ1E1NXNDQUJWNGo2Zi9KQWdBaVhuKzFsK0lMZ0ZnTU84NTRmWFJKWEF2V3dDSmtjWUFHSU1KUUlLZVp3b0FGT2hXVC85SkVRQVM5Ynl0cjRndUFhQTN0NTV3WFhRSlBJQXRnRVJKWlFBTXlUY0JKdXA5MGpKUUNQZXpOTmtDU054UFhubFVkQWtBbmIzLytHdWpTMkFSdGdBU0o1MEJNQVJiQUluN2dQUU1aTXI5SzIyMkFETHhYRnNCUUVadTAveVRad3NnRTd1YXVlZ1NBQ2lJTFlCTWZQRDRhNkpMQUppSysxVWViQUZrNWpsWEhoMWRBc0NpYnRmOHN5RUFaT2c1Vng0VFhRTEFnOXgrL05YUkpkQ0Nkd0F5SkxFQk1Dc1RnRXc5MnhRQVNNaUhQZjFuUndESTJMT3ZQRGE2QklEbXc4ZHZpeTZCRGdTQXpEMUxDQUFDM2FINVo4czdBSm1UM2dEb3dnU2dBTSs4NnJqb0VvQUtmZVM0cTZKTFlBWUNRQ0dlSVFRQUkvcW81cDg5M3dSWUNJc1JHSXY3VFJsTUFBcno5S3VPank0QktOakhqcnN5dWdSNklnQVU2TWVFQUdBQUg5ZjhpMklMQUFBcVpBSlFxS2RkZFVKMENVQkJQbkhjMXVnUzZKa0FVTEFqaEFDZ0IzZHEva1d5QlZBd2l4YVlsZnRJdVV3QUt2RFVxNVpGbHdCazZLN2pyb2d1Z1FHWkFGVEFJZ2JhY3Q4b253bEFSWjVpRWdCTTRXN052d29DUUdWKzlLcmwwU1VBQ2Z2a2NaZEhsOEJJYkFGVXh1SUdGdVArVUJjVGdFbzllWnRKQUhDL1R4MnIrZGRHQUtqWWs3YXRpQzRCU01Dbmo3MHN1Z1FDMkFLb21FVVB1QS9VeXdTQTVrZE1BcUJLZjZINVY4MEVBRGNCcUpCMWp3a0E5emw4MjRuUkpRQWorTXl4bDBhWFFBSUVBUGJ5UkNFQWl2YVhtai8zc2dYQVh0d2NvRnpXTi9PWkFMQ2dKMnhiR1YwQzBLTy9PdmFTNkJKSWpBa0FDM0t6Z0hKWXp5ekVCSUNKRGpNTmdDeDlWdU5uQ1FJQVUzbjh0bFhSSlFBdGZPN1lpNk5MSUhHMkFKaUttd25rdzNwbEdpWUF0SEtvU1FBazdmT2FQMU1TQUdqdGNWZXZqaTRCV01CZkgvTzY2QkxJaUFCQVo0SUFwRUhqcHdzQmdKa2NJZ1JBcUhzMGZ6b1NBSmpaSVZldmlTNEJxblRQTVJkRmwwREdCQUI2YzdBZ0FLUDRnc1pQRHdRQWVuV1FFQUNEK3FMbVQwOEVBSHAzME5Wcm8wdUFJbjN4bUF1alM2QWdBZ0NET1ZBUWdGNThTZU5uQUFJQWczcXNFQUF6K2JMbXowQUVBRWJ4Mkt0UGlpNEJzdkxsWXk2SUxvSEN6VFZOMHdnQmpPRUFJUUNtOGhYTm40SHQzTEY5VGdCZ2RJSUFMRXpqWnl3Q0FHRWVjL1hKMFNWQVVyNTZ6SmJvRXFpSUFFQzRSMThqQ0ZDM3J4MnQ4VE8rblR1MnorMFRYUVIxYy9PalpxNS9JcGtBa0l4SG1RWlFpYTlyL0FTekJVQ1NIbm5OS2RFbHdDQytjZlRtNkJLZ2FSb0JnTVFKQXBSQzR5YzE5d1dBcGhFQ1NOTWpoQUF5OTAzTm44VHMzTEY5cm1udWZRZWdhUVFBMHZhSWEwNk5MZ0ZhK2ViUm02SkxnQVVKQUdUcGh3VUJFdmMzR2orSkV3REkydjZDQUluWnJ2R1RDUUdBSXV4L3pXblJKVkM1N1VkdmpDNEJXbmxRQUdnYUlZQjgvWkFnd01qK1Z1TW5RM3VhZjlNSUFCVG00WUlBQS91V3hrL0dCQUNxOFBCclRvOHVnVUo4Nitqem8wdUFYZ2dBVk9WaGdnQWRmVnZqcHpDTEJvQ21FUUlvMThPdUZRU1l6cmVQMHZncHovem0zelFDQUpYNndXdlBpQzZCeFB6ZFVSdWlTNEJCQ1FBd3ozNkNRUFYyYVB4VVFnQ0FSUWdEOWREMHFkSEVBTkEwUWdEOHdMVm5ScGRBei83K3FQWFJKVUNZQnpiL3BoRUFZS0x2RndheTlRK2FQalJOSXdCQUx3U0NkR240c0xDcEEwRFRDQUV3amUrNzlxem9FcXIzajBlZEYxMENKRzJoNXQ4MEFnRDBTaUFZbm9ZUDdRZ0FFR0JmZ1dCbU96VjhtRW5yQU5BMFFnQU00WHV2UFR1NmhHVDkwMUhyb2t1QW9pelcvSnRHQUlBazFCZ0tOSHNZbmdBQUdYdG94dUhnTzVvOGhPb2NBSnBHQ0FDQUhDM1YvSnVtYWZZWnF4QUFJQjBUQThDa0JBRUFwR1dhM20wQ0FBQVZFZ0FBb0VKVEJRRGJBQUNRaDJsN3Rna0FBRlJvNmdCZ0NnQUFhV3ZUcTAwQUFLQkNyUUtBS1FBQXBLbHRqellCQUlBS3RRNEFwZ0FBa0pZdXZka0VBQUFxMUNrQW1BSUFRQnE2OW1RVEFBQ29VT2NBWUFvQUFMRm02Y1V6VFFDRUFBQ0lNV3NQdGdVQUFCV2FPUUNZQWdEQXVQcm92U1lBQUZDaFhnS0FLUUFBaktPdm50dmJCRUFJQUlCaDlkbHJiUUVBUUlWNkRRQ21BQUF3akw1N2JPOFRBQ0VBQVBvMVJHOGRaQXRBQ0FDQWZnelZVNzBEQUFBVkdpd0FtQUlBd0d5RzdLV0RUZ0NFQUFEb1p1Z2VPdmdXZ0JBQUFPMk0wVHU5QXdBQUZSb2xBSmdDQU1CMHh1cVpvMDBBaEFBQVdOcVl2WExVTFFBaEFBQVdObmFQSFAwZEFDRUFBUFlXMFJ0RFhnSVVBZ0JndDZpZUdQWmJBRUlBQUxXTDdJV2h2d1lvQkFCUXErZ2VHUDQ5QU5FbkFBREdsa0x2Q3c4QVRaUEdpUUNBTWFUUzg1SUlBRTJUemdrQmdLR2sxT3VTQ1FCTms5YUpBWUErcGRiamtnb0FUWlBlQ1FLQVdhWFkyNUlMQUUyVDVva0NnQzVTN1dsSkJvQ21TZmVFQWNDMFV1NWx5UWFBcGtuN3hBSEFVbEx2WVVrSGdLWkovd1FDd0FQbDBMdVNMM0MrZmZmYmYxZDBEUUN3bUJ3YS94N0pUd0RteStuRUFsQ1gzSHBVVmdHZ2FmSTd3UUNVTDhmZWxGM0I4OWtTQUNCU2pvMS9qK3dtQVBQbGZPSUJ5RnZ1UFNqckFOQTArZjhBQU1oUENiMG4rdzh3bnkwQkFJWlVRdVBmSS9zSndId2wvV0FBU0V0cFBhYW9Eek9mYVFBQWZTaXQ4ZTlSNUllYVR4QUFvSXRTRy84ZVJXMEJMS1QwSHlBQS9hdWhkeFQvQWVjekRRQmdLVFUwL2oycSthRHpDUUlBekZkVDQ5K2p1Zzg4bnlBQVVMY2FHLzhlMVg3dytRUUJnTHJVM1BqM3FQNEV6Q2NJQUpSTjQ3K2ZFN0VJWVFDZ0RKcit3cHlVQ1FRQmdEeHAvRXR6Y2xvUUJnRFNwdWxQejRucVNCZ0FTSU9tMzQyVDFnTmhBR0JjbXY3c25NQUJDQVFBL2RMdysrZUVqa0FnQUdoSHd4K2VFeHhFS0FEWVRiT1A0YVFuU2tBQVNxSEJwK24vQTRickRISmw5b05SQUFBQUFFbEZUa1N1UW1DQyIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn1dfQ==">
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="apple-touch-icon" href="data:image/png;base64,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">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AromaCraft">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            custom: '#d4af37'
+                        },
+                        emerald: {
+                            custom: '#10b981'
+                        },
+                        darkbg: '#0f172a',
+                        cardbg: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #090d12;
+            color: #f1f5f9;
+        }
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-900">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800 px-4 lg:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-emerald-500 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold font-serif-title text-amber-400 tracking-wide">AromaCraft</h1>
+                    <p class="text-xs text-slate-400">Interactive Perfumery Suite</p>
+                </div>
+            </div>
+
+            <!-- Nav Tabs Desktop -->
+            <nav class="hidden md:flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800">
+                <button onclick="switchTab('guide')" id="tab-btn-guide" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2 bg-amber-500 text-slate-950 shadow">
+                    <i class="fa-solid fa-graduation-cap"></i> Panduan Meracik
+                </button>
+                <button onclick="switchTab('calculator')" id="tab-btn-calculator" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-calculator"></i> Kalkulator Dosis
+                </button>
+                <button onclick="switchTab('matcher')" id="tab-btn-matcher" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Scent Matcher
+                </button>
+                <button onclick="switchTab('encyclopedia')" id="tab-btn-encyclopedia" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark"></i> Ensiklopedia Solven
+                </button>
+                <button onclick="switchTab('recipes')" id="tab-btn-recipes" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-box-archive"></i> Jurnal Resep
+                </button>
+            </nav>
+
+        </div>
+
+        <!-- Nav Mobile -->
+        <div class="md:hidden flex justify-around mt-3 pt-2 border-t border-slate-800/60 overflow-x-auto">
+            <button onclick="switchTab('guide')" class="tab-btn-mob text-amber-400 flex flex-col items-center text-xs gap-1 px-2">
+                <i class="fa-solid fa-graduation-cap text-base"></i> Panduan
+            </button>
+            <button onclick="switchTab('calculator')" class="tab-btn-mob text-slate-400 flex flex-col items-center text-xs gap-1 px-2">
+                <i class="fa-solid fa-calculator text-base"></i> Kalkulator
+            </button>
+            <button onclick="switchTab('matcher')" class="tab-btn-mob text-slate-400 flex flex-col items-center text-xs gap-1 px-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-base"></i> Matcher
+            </button>
+            <button onclick="switchTab('encyclopedia')" class="tab-btn-mob text-slate-400 flex flex-col items-center text-xs gap-1 px-2">
+                <i class="fa-solid fa-book-bookmark text-base"></i> Edukasi
+            </button>
+            <button onclick="switchTab('recipes')" class="tab-btn-mob text-slate-400 flex flex-col items-center text-xs gap-1 px-2">
+                <i class="fa-solid fa-box-archive text-base"></i> Jurnal
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto w-full px-4 lg:px-8 py-8 flex-grow">
+
+        <!-- ==================== TAB 0: PANDUAN MERACIK ==================== -->
+        <section id="sec-guide" class="tab-content block space-y-8">
+            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+                <h2 class="text-2xl font-serif-title font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-vial-circle-check text-amber-500"></i> Panduan Meracik Produk Wewangian Utama
+                </h2>
+                <p class="text-slate-400 text-sm mt-1">Langkah demi langkah prosedur pembuatan Eau de Parfum, Reed Diffuser, Car Diffuser, dan Lilin Aromaterapi sesuai standar industri.</p>
+            </div>
+
+            <!-- TAB PEMILIHAN KATEGORI PRODUK -->
+            <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4">
+                <button onclick="switchProductGuide('edp')" id="pbtn-edp" class="prod-guide-btn px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 flex items-center gap-2 shadow">
+                    <i class="fa-solid fa-spray-can text-sm"></i> 1. Eau de Parfum (EDP)
+                </button>
+                <button onclick="switchProductGuide('reed')" id="pbtn-reed" class="prod-guide-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-plant-wilt text-sm"></i> 2. Reed Diffuser
+                </button>
+                <button onclick="switchProductGuide('car')" id="pbtn-car" class="prod-guide-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-car text-sm"></i> 3. Car Diffuser
+                </button>
+                <button onclick="switchProductGuide('candle')" id="pbtn-candle" class="prod-guide-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-fire-flame-curved text-sm"></i> 4. Lilin Aromaterapi
+                </button>
+            </div>
+
+            <!-- PRODUK 1: EAU DE PARFUM (EDP) -->
+            <div id="psec-edp" class="prod-guide-sec block space-y-6">
+                <div class="glass-card p-6 rounded-2xl border border-amber-500/30">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                        <h3 class="text-xl font-serif-title font-bold text-amber-400 flex items-center gap-2">
+                            <i class="fa-solid fa-spray-can"></i> Prosedur Meracik Eau de Parfum (EDP)
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 font-semibold">Konsentrasi: 15% - 25% Oil</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">1</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Penimbangan Accord Biang</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Campurkan Fragrance / Essential Oil sesuai rasio Top, Heart, dan Base Notes di beaker glass steril menggunakan timbangan digital.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">2</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Pelarutan Alkohol & Fixative</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Tambahkan Perfumer's Alcohol (Ethanol 96%) dan Fixative (Glucam P-20 / Ambroxan 1–3%) lalu aduk perlahan selama 2-3 menit hingga homogen.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">3</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Maserasi (Aging)</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Simpan racikan dalam botol kaca gelap di tempat sejuk dan kedap cahaya selama 14–30 hari agar ikatan molekul stabil dan alkohol lebih halus.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">4</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Penyaringan & Packaging</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Saring cairan menggunakan kertas saring mikron jika terdapat endapan, kemudian tuangkan ke botol atomizer spray siap pakai.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 2: REED DIFFUSER -->
+            <div id="psec-reed" class="prod-guide-sec hidden space-y-6">
+                <div class="glass-card p-6 rounded-2xl border border-emerald-500/30">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                        <h3 class="text-xl font-serif-title font-bold text-emerald-400 flex items-center gap-2">
+                            <i class="fa-solid fa-plant-wilt"></i> Prosedur Meracik Reed Diffuser ruangan
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Konsentrasi: 15% - 25% Fragrance Oil</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">1</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Persiapan Solven Khusus</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Gunakan pelarut khusus Reed Diffuser berbasis ramah lingkungan seperti Augeo Clean Multi atau DPG (75%-85%). Hindari alkohol tinggi agar tidak cepat habis.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">2</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Pencampuran Fragrance Oil</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Campurkan 15% - 25% Fragrance Oil pilihan ke dalam pelarut Augeo. Aduk perlahan hingga benar-benar menyatu tanpa ada pemisahan lapisan.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">3</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Penuangan & Pemilihan Stik</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Tuang ke dalam botol kaca bermulut sempit. Siapkan 4-6 batang stik Fiber atau Rattan (stik fiber memiliki daya kapilaritas penyebaran lebih kuat).</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">4</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Aktivasi Kapilaritas</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Celupkan stik, biarkan 1 jam, lalu balikkan stik agar bagian yang basah berada di atas untuk memicu pelepasan aroma secara instan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 3: CAR DIFFUSER -->
+            <div id="psec-car" class="prod-guide-sec hidden space-y-6">
+                <div class="glass-card p-6 rounded-2xl border border-blue-500/30">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                        <h3 class="text-xl font-serif-title font-bold text-blue-400 flex items-center gap-2">
+                            <i class="fa-solid fa-car"></i> Prosedur Meracik Car Diffuser (Gantung/Kaca)
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 font-semibold">Konsentrasi: 20% - 35% Fragrance Oil</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">1</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Pemilihan Pelarut Lembut</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Gunakan DPG / MMB / Augeo sebagai pelarut utama. Hindari penggunaan Ethanol tinggi karena dapat merusak interior mobil jika terpercik.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">2</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Pencampuran Rasio Tinggi</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Gunakan konsentrasi Fragrance Oil sekitar 25% - 30% agar aromanya sanggup menembus tutupan kayu (wooden cap) botol mobil.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">3</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Pengisian ke Botol Apel</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Masukkan cairan menggunakan pipet tetes presisi ke dalam botol kaca gantung kecil (8-10 ml) dan tutup rapat dengan sumbat silikon internal.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">4</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Cara Penggunaan Aman</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Pasang tutup kayu outdoor, balikkan botol selama 3–5 detik hingga kayu menyerap cairan, lalu gantungkan di kaca spion tengah mobil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 4: LILIN AROMATERAPI -->
+            <div id="psec-candle" class="prod-guide-sec hidden space-y-6">
+                <div class="glass-card p-6 rounded-2xl border border-rose-500/30">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                        <h3 class="text-xl font-serif-title font-bold text-rose-400 flex items-center gap-2">
+                            <i class="fa-solid fa-fire-flame-curved"></i> Prosedur Meracik Lilin Aromaterapi (Scented Candle)
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 font-semibold">Fragrance Load: 6% - 10% dari Berat Wax</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm">1</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Pelelehan Wax Alami</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Lelehkan Soy Wax / Palm Wax menggunakan metode double boiler (panci tim) pada suhu 75°C - 85°C hingga mencair sempurna.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm">2</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Suhu Penambahan Fragrance</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Tunggu lelehan wax turun ke suhu 65°C - 70°C (Flash Point) sebelum memasukkan Fragrance Oil (6–10%) agar minyak tidak menguap rusak terbakar.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm">3</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Penuangan & Sumbu</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Posisikan sumbu katun/kayu di tengah wadah gelas. Tuang lilin perlahan pada suhu 55°C - 60°C untuk mencegah permukaan berlubang atau retak.</p>
+                        </div>
+                        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-sm">4</div>
+                            <h4 class="font-bold text-slate-200 text-sm">Proses Curing</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Lakukan curing (pendiaman lilin) selama minimal 48 jam (ideal 1–2 minggu untuk soy wax) sebelum dinyalakan agar persebaran aroma meluas maksimal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border border-amber-500/30 flex items-center justify-between gap-4">
+                <div>
+                    <h3 class="font-bold text-white text-base">Siap menghitung racikan Anda?</h3>
+                    <p class="text-xs text-slate-400">Gunakan Kalkulator Dosis untuk menentukan mililiter dan gram yang presisi.</p>
+                </div>
+                <button onclick="switchTab('calculator')" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg transition flex items-center gap-2">
+                    Buka Kalkulator <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- ==================== TAB 1: KALKULATOR DOSIS ==================== -->
+        <section id="sec-calculator" class="tab-content hidden space-y-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+                <div>
+                    <h2 class="text-2xl font-serif-title font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-flask-vial text-amber-500"></i> Kalkulator Formulasi Perfumery
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Hitung persentase konsentrasi, berat gram, dan mililiter untuk racikan parfum standar laboratorium.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="presetFormula('ext')" class="px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-semibold hover:bg-amber-500 hover:text-slate-900 transition">Extrait 30%</button>
+                    <button onclick="presetFormula('edp')" class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-semibold hover:bg-emerald-500 hover:text-slate-900 transition">EDP 20%</button>
+                    <button onclick="presetFormula('edt')" class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/30 text-xs font-semibold hover:bg-blue-500 hover:text-slate-900 transition">EDT 12%</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- INPUT PARAMETERS -->
+                <div class="lg:col-span-5 glass-card p-6 rounded-2xl space-y-6">
+                    <h3 class="text-lg font-bold text-slate-200 border-b border-slate-700/60 pb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-amber-400"></i> Parameter Racikan
+                    </h3>
+
+                    <!-- Target Volume -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-semibold text-slate-300">Target Volume Total (mL)</label>
+                            <span id="val-target-vol" class="text-amber-400 font-bold text-base">50 mL</span>
+                        </div>
+                        <input type="range" id="input-vol" min="5" max="250" step="5" value="50" oninput="calculateFormulation()" class="w-full accent-amber-500 bg-slate-800 rounded-lg cursor-pointer h-2">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                            <span>5 ml</span>
+                            <span>30 ml</span>
+                            <span>50 ml</span>
+                            <span>100 ml</span>
+                            <span>250 ml</span>
+                        </div>
+                    </div>
+
+                    <!-- Oil Ratio (Concentration) -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-semibold text-slate-300">Konsentrasi Minyak Biang (%)</label>
+                            <span id="val-oil-ratio" class="text-amber-400 font-bold text-base">20% (EDP)</span>
+                        </div>
+                        <input type="range" id="input-oil" min="2" max="40" step="1" value="20" oninput="calculateFormulation()" class="w-full accent-amber-500 bg-slate-800 rounded-lg cursor-pointer h-2">
+                    </div>
+
+                    <!-- Fixative Ratio -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-semibold text-slate-300">Pengikat (Fixative Glucam P-20) (%)</label>
+                            <span id="val-fix-ratio" class="text-emerald-400 font-bold text-base">3%</span>
+                        </div>
+                        <input type="range" id="input-fix" min="0" max="8" step="0.5" value="3" oninput="calculateFormulation()" class="w-full accent-emerald-500 bg-slate-800 rounded-lg cursor-pointer h-2">
+                    </div>
+
+                    <!-- Water Ratio -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-semibold text-slate-300">Aqua Destillata / Air Terdistilasi (%)</label>
+                            <span id="val-water-ratio" class="text-blue-400 font-bold text-base">2%</span>
+                        </div>
+                        <input type="range" id="input-water" min="0" max="10" step="1" value="2" oninput="calculateFormulation()" class="w-full accent-blue-500 bg-slate-800 rounded-lg cursor-pointer h-2">
+                    </div>
+
+                    <hr class="border-slate-800">
+
+                    <!-- Pyramid Accord Ratios -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-bold text-slate-200 uppercase tracking-wider flex items-center justify-between">
+                            <span>Distribusi Olfactive Pyramid</span>
+                            <span class="text-xs font-normal text-slate-400">(Top/Heart/Base)</span>
+                        </h4>
+
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-300"><i class="fa-solid fa-cloud text-amber-400"></i> Top Notes (Kesegaran Awal)</span>
+                                <span id="val-top-pct" class="font-bold text-amber-400">30%</span>
+                            </div>
+                            <input type="range" id="input-top-pct" min="10" max="60" step="5" value="30" oninput="calculateFormulation()" class="w-full accent-amber-400 bg-slate-800 rounded-lg cursor-pointer h-1.5">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-300"><i class="fa-solid fa-heart text-rose-400"></i> Heart Notes (Karakter Utama)</span>
+                                <span id="val-heart-pct" class="font-bold text-rose-400">50%</span>
+                            </div>
+                            <input type="range" id="input-heart-pct" min="10" max="70" step="5" value="50" oninput="calculateFormulation()" class="w-full accent-rose-400 bg-slate-800 rounded-lg cursor-pointer h-1.5">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-300"><i class="fa-solid fa-tree text-emerald-400"></i> Base Notes (Daya Tahan / Drydown)</span>
+                                <span id="val-base-pct" class="font-bold text-emerald-400">20%</span>
+                            </div>
+                            <input type="range" id="input-base-pct" min="10" max="60" step="5" value="20" oninput="calculateFormulation()" class="w-full accent-emerald-400 bg-slate-800 rounded-lg cursor-pointer h-1.5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OUTPUT BREAKDOWN CARD -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="glass-card p-6 rounded-2xl gold-glow border border-amber-500/30">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-amber-500 tracking-wider">Hasil Penghitungan Resep</span>
+                                <h3 id="res-title-type" class="text-xl font-serif-title font-bold text-white">Eau de Parfum (EDP 20%)</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-400 block">Perkiraan Massa Total</span>
+                                <span id="res-total-gram" class="text-2xl font-extrabold text-amber-400">42.85 g</span>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar Composition Visual -->
+                        <div class="mb-6">
+                            <div class="flex justify-between text-xs text-slate-400 mb-1.5">
+                                <span>Komposisi Pelarut & Oil</span>
+                                <span id="res-comp-summary">20% Biang | 75% Alkohol | 3% Fixative | 2% Air</span>
+                            </div>
+                            <div class="w-full h-4 bg-slate-800 rounded-full overflow-hidden flex shadow-inner">
+                                <div id="bar-oil" style="width: 20%" class="bg-amber-500 h-full" title="Biang Parfum"></div>
+                                <div id="bar-alcohol" style="width: 75%" class="bg-indigo-600 h-full" title="Ethanol 96%"></div>
+                                <div id="bar-fix" style="width: 3%" class="bg-emerald-500 h-full" title="Fixative"></div>
+                                <div id="bar-water" style="width: 2%" class="bg-blue-400 h-full" title="Aqua Destillata"></div>
+                            </div>
+                        </div>
+
+                        <!-- Detail Table -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm">
+                                <thead>
+                                    <tr class="text-slate-400 border-b border-slate-800 text-xs uppercase">
+                                        <th class="py-2.5 px-3">Bahan / Material</th>
+                                        <th class="py-2.5 px-3">Persentase</th>
+                                        <th class="py-2.5 px-3">Volume (mL)</th>
+                                        <th class="py-2.5 px-3">Berat Baku (Gram)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-800/60 font-medium">
+                                    <tr class="bg-amber-500/10 text-amber-200">
+                                        <td class="py-3 px-3 flex items-center gap-2">
+                                            <i class="fa-solid fa-droplet text-amber-400"></i> Minyak Biang (Fragrance Oil)
+                                        </td>
+                                        <td id="row-oil-pct" class="py-3 px-3">20%</td>
+                                        <td id="row-oil-ml" class="py-3 px-3 font-bold">10.0 mL</td>
+                                        <td id="row-oil-g" class="py-3 px-3 font-bold text-amber-400">9.50 g</td>
+                                    </tr>
+                                    <tr class="text-slate-300">
+                                        <td class="py-2 px-3 pl-8 text-xs text-slate-400">
+                                            <div class="font-semibold text-amber-300">↳ Top Notes (Aroma Awal)</div>
+                                            <div id="desc-top-notes" class="text-[11px] text-amber-400/80 italic font-normal">Formula umum / standar</div>
+                                        </td>
+                                        <td id="row-top-pct" class="py-2 px-3 text-xs">30% dari oil</td>
+                                        <td id="row-top-ml" class="py-2 px-3 text-xs">3.0 mL</td>
+                                        <td id="row-top-g" class="py-2 px-3 text-xs">2.85 g</td>
+                                    </tr>
+                                    <tr class="text-slate-300">
+                                        <td class="py-2 px-3 pl-8 text-xs text-slate-400">
+                                            <div class="font-semibold text-rose-300">↳ Heart Notes (Aroma Utama)</div>
+                                            <div id="desc-heart-notes" class="text-[11px] text-rose-400/80 italic font-normal">Formula umum / standar</div>
+                                        </td>
+                                        <td id="row-heart-pct" class="py-2 px-3 text-xs">50% dari oil</td>
+                                        <td id="row-heart-ml" class="py-2 px-3 text-xs">5.0 mL</td>
+                                        <td id="row-heart-g" class="py-2 px-3 text-xs">4.75 g</td>
+                                    </tr>
+                                    <tr class="text-slate-300">
+                                        <td class="py-2 px-3 pl-8 text-xs text-slate-400">
+                                            <div class="font-semibold text-emerald-300">↳ Base Notes (Fondasi Aroma)</div>
+                                            <div id="desc-base-notes" class="text-[11px] text-emerald-400/80 italic font-normal">Formula umum / standar</div>
+                                        </td>
+                                        <td id="row-base-pct" class="py-2 px-3 text-xs">20% dari oil</td>
+                                        <td id="row-base-ml" class="py-2 px-3 text-xs">2.0 mL</td>
+                                        <td id="row-base-g" class="py-2 px-3 text-xs">1.90 g</td>
+                                    </tr>
+                                    <tr class="text-slate-200">
+                                        <td class="py-3 px-3 flex items-center gap-2">
+                                            <i class="fa-solid fa-wine-bottle text-indigo-400"></i> Perfumer's Alcohol (Ethanol 96%)
+                                        </td>
+                                        <td id="row-alc-pct" class="py-3 px-3">75%</td>
+                                        <td id="row-alc-ml" class="py-3 px-3">37.5 mL</td>
+                                        <td id="row-alc-g" class="py-3 px-3">30.38 g</td>
+                                    </tr>
+                                    <tr class="text-slate-200">
+                                        <td class="py-3 px-3 flex items-center gap-2">
+                                            <i class="fa-solid fa-shield-halved text-emerald-400"></i> Fixative (Glucam P-20)
+                                        </td>
+                                        <td id="row-fix-pct" class="py-3 px-3">3%</td>
+                                        <td id="row-fix-ml" class="py-3 px-3">1.5 mL</td>
+                                        <td id="row-fix-g" class="py-3 px-3">1.58 g</td>
+                                    </tr>
+                                    <tr class="text-slate-200">
+                                        <td class="py-3 px-3 flex items-center gap-2">
+                                            <i class="fa-solid fa-glass-water text-blue-400"></i> Aqua Destillata
+                                        </td>
+                                        <td id="row-water-pct" class="py-3 px-3">2%</td>
+                                        <td id="row-water-ml" class="py-3 px-3">1.0 mL</td>
+                                        <td id="row-water-g" class="py-3 px-3">1.00 g</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Action Controls -->
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
+                            <div class="text-xs text-slate-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-circle-info text-amber-400"></i>
+                                <span>Density: Oil ~0.95 g/mL | Alcohol ~0.81 g/mL</span>
+                            </div>
+                            <button onclick="saveCurrentRecipe()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg transition flex items-center gap-2">
+                                <i class="fa-solid fa-bookmark"></i> Simpan Resep Ini
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- IFRA & Longevity Insights -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
+                            <h4 class="text-sm font-bold text-emerald-400 flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-clock"></i> Estimasi Longevity & Sillage
+                            </h4>
+                            <p id="insight-longevity" class="text-xs text-slate-300 leading-relaxed">
+                                Dengan konsentrasi 20% EDP & tambahan Fixative 3%, perkiraan daya tahan aroma di kulit adalah <strong>6 - 8 jam</strong> dengan sillage sedang-tinggi.
+                            </p>
+                        </div>
+                        <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
+                            <h4 class="text-sm font-bold text-amber-400 flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-triangle-exclamation"></i> IFRA Compliance Status
+                            </h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Aman untuk penggunaan kosmetik langsung di kulit. Pastikan minyak atsiri berisiko (seperti Bergamot) bebas Bergapten (FCF).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB 2: SCENT MATCHER QUIZ ==================== -->
+        <section id="sec-matcher" class="tab-content hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/30">Personalized Engine</span>
+                <h2 class="text-3xl font-serif-title font-bold text-white">Scent Matcher Quiz</h2>
+                <p class="text-slate-400 text-sm">Jawab 3 pertanyaan sederhana untuk menemukan profil aromatik unik yang cocok dengan Zodiak, Love Language, dan kepribadian Anda.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto glass-card p-6 md:p-8 rounded-2xl gold-glow">
+                <!-- STEP 1: ZODIAC -->
+                <div id="quiz-step-1" class="quiz-step space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">1</span>
+                            Pilih Zodiak Anda
+                        </h3>
+                        <span class="text-xs text-slate-500">Langkah 1 dari 3</span>
+                    </div>
+
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                        <button onclick="selectZodiac('Aries', 'Fire')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-fire text-amber-500 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Aries</span>
+                        </button>
+                        <button onclick="selectZodiac('Taurus', 'Earth')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-leaf text-emerald-500 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Taurus</span>
+                        </button>
+                        <button onclick="selectZodiac('Gemini', 'Air')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-wind text-sky-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Gemini</span>
+                        </button>
+                        <button onclick="selectZodiac('Cancer', 'Water')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-droplet text-blue-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Cancer</span>
+                        </button>
+                        <button onclick="selectZodiac('Leo', 'Fire')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-sun text-amber-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Leo</span>
+                        </button>
+                        <button onclick="selectZodiac('Virgo', 'Earth')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-seedling text-emerald-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Virgo</span>
+                        </button>
+                        <button onclick="selectZodiac('Libra', 'Air')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-scale-balanced text-indigo-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Libra</span>
+                        </button>
+                        <button onclick="selectZodiac('Scorpio', 'Water')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-moon text-purple-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Scorpio</span>
+                        </button>
+                        <button onclick="selectZodiac('Sagittarius', 'Fire')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-compass text-rose-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Sagittarius</span>
+                        </button>
+                        <button onclick="selectZodiac('Capricorn', 'Earth')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-mountain text-stone-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Capricorn</span>
+                        </button>
+                        <button onclick="selectZodiac('Aquarius', 'Air')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-feather text-cyan-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Aquarius</span>
+                        </button>
+                        <button onclick="selectZodiac('Pisces', 'Water')" class="zodiac-opt p-3 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-center transition">
+                            <i class="fa-solid fa-fish text-teal-400 text-xl mb-1 block"></i>
+                            <span class="text-xs font-semibold block text-slate-200">Pisces</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: LOVE LANGUAGE -->
+                <div id="quiz-step-2" class="quiz-step hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">2</span>
+                            Pilih Love Language Utama Anda
+                        </h3>
+                        <span class="text-xs text-slate-500">Langkah 2 dari 3</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <button onclick="selectLoveLang('Physical Touch')" class="w-full p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center text-lg"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-200 text-sm">Physical Touch (Sentuhan Fisik)</h4>
+                                <p class="text-xs text-slate-400">Menyukai aroma hangat, velvety, skin-scent, Amber, Vanilla, & Warm Musk.</p>
+                            </div>
+                        </button>
+                        <button onclick="selectLoveLang('Quality Time')" class="w-full p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg"><i class="fa-solid fa-mug-hot"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-200 text-sm">Quality Time (Waktu Bersama)</h4>
+                                <p class="text-xs text-slate-400">Aroma cozy, menenangkan, Sandalwood, Tea, Tonka Bean, & Lavender.</p>
+                            </div>
+                        </button>
+                        <button onclick="selectLoveLang('Words of Affirmation')" class="w-full p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg"><i class="fa-solid fa-comment-dots"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-200 text-sm">Words of Affirmation (Pujian & Kalimat Kasih)</h4>
+                                <p class="text-xs text-slate-400">Aroma ceria, bright, Citrus Bergamot, Jasmine, Blossom, & Pink Pepper.</p>
+                            </div>
+                        </button>
+                        <button onclick="selectLoveLang('Receiving Gifts')" class="w-full p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg"><i class="fa-solid fa-gift"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-200 text-sm">Receiving Gifts (Hadiah)</h4>
+                                <p class="text-xs text-slate-400">Aroma mewah, rich, Oud, Turkish Rose, Iris, & Gourmand Sweet Chocolate.</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: VIBE / PERSONALITY -->
+                <div id="quiz-step-3" class="quiz-step hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">3</span>
+                            Pilih Karakter / MBTI Vibe Anda
+                        </h3>
+                        <span class="text-xs text-slate-500">Langkah 3 dari 3</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button onclick="finishQuiz('Introvert Calm')" class="p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition">
+                            <i class="fa-solid fa-brain text-emerald-400 text-xl mb-2 block"></i>
+                            <h4 class="font-bold text-slate-200 text-sm">Introvert & Calm</h4>
+                            <p class="text-xs text-slate-400 mt-1">Tenang, elegan, menyukai aroma woody, vetiver, dan clean linen.</p>
+                        </button>
+                        <button onclick="finishQuiz('Extrovert Vibrant')" class="p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition">
+                            <i class="fa-solid fa-bolt text-amber-400 text-xl mb-2 block"></i>
+                            <h4 class="font-bold text-slate-200 text-sm">Extrovert & Energetic</h4>
+                            <p class="text-xs text-slate-400 mt-1">Penuh energi, ramah, menyukai citrus segar, spices, dan aquatic notes.</p>
+                        </button>
+                        <button onclick="finishQuiz('Creative Artistic')" class="p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition">
+                            <i class="fa-solid fa-palette text-purple-400 text-xl mb-2 block"></i>
+                            <h4 class="font-bold text-slate-200 text-sm">Creative & Artistic</h4>
+                            <p class="text-xs text-slate-400 mt-1">Unik, puitis, menyukai akor avant-garde, fig leaf, cardamom, & incense.</p>
+                        </button>
+                        <button onclick="finishQuiz('Bold Luxury')" class="p-4 rounded-xl bg-slate-900 hover:bg-amber-500/20 border border-slate-800 hover:border-amber-500 text-left transition">
+                            <i class="fa-solid fa-crown text-amber-500 text-xl mb-2 block"></i>
+                            <h4 class="font-bold text-slate-200 text-sm">Bold & Luxurious</h4>
+                            <p class="text-xs text-slate-400 mt-1">Percaya diri tinggi, menyukai aroma leather, saffron, amber, & dark rose.</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- QUIZ RESULT CARD -->
+                <div id="quiz-result" class="hidden space-y-6">
+                    <div class="text-center p-6 bg-gradient-to-b from-amber-500/10 to-transparent rounded-2xl border border-amber-500/30">
+                        <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Hasil Rekomendasi Scent Matcher</span>
+                        <h3 id="res-accord-name" class="text-2xl font-serif-title font-bold text-white mt-1">Celestial Amber & Cozy Vanilla</h3>
+                        <p id="res-accord-desc" class="text-xs text-slate-300 mt-2 max-w-xl mx-auto leading-relaxed">
+                            Formula ini dirancang khusus untuk menyeimbangkan energi elemental Zodiak Anda dengan kenyamanan aroma sensual.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs font-bold text-amber-400 block mb-1"><i class="fa-solid fa-cloud"></i> Top Note Recommended</span>
+                            <h4 id="res-top-notes" class="font-bold text-slate-200 text-sm">Bergamot, Pink Pepper, Mandarine</h4>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs font-bold text-rose-400 block mb-1"><i class="fa-solid fa-heart"></i> Heart Note Recommended</span>
+                            <h4 id="res-heart-notes" class="font-bold text-slate-200 text-sm">Lavender, Cashmere Wood, Jasmine</h4>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs font-bold text-emerald-400 block mb-1"><i class="fa-solid fa-tree"></i> Base Note Recommended</span>
+                            <h4 id="res-base-notes" class="font-bold text-slate-200 text-sm">Amber, Bourbon Vanilla, Sandalwood</h4>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                        <button onclick="resetQuiz()" class="text-xs text-slate-400 hover:text-white flex items-center gap-1.5">
+                            <i class="fa-solid fa-rotate-left"></i> Ulangi Quiz
+                        </button>
+                        <button onclick="importToCalculator()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg transition flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i> Impor Formula Ini ke Kalkulator
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB 3: ENSIKLOPEDIA & MODUL EDUKASI ==================== -->
+        <section id="sec-encyclopedia" class="tab-content hidden space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-2xl font-serif-title font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-amber-500"></i> Ensiklopedia Perfumery & Modul Pelatihan
+                    </h2>
+                    <p class="text-slate-400 text-sm">Modul edukasi lengkap beserta basis data solven, carrier, dan fixative pengikat aroma.</p>
+                </div>
+
+                <!-- Search Input -->
+                <div class="relative w-full md:w-72">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-500 text-sm"></i>
+                    <input type="text" id="enc-search" oninput="filterEncyclopedia()" placeholder="Cari bahan / modul (contoh: DPG, Modul 1)..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500">
+                </div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2">
+                <button onclick="filterCategory('all')" class="enc-cat-btn px-4 py-1.5 rounded-lg text-xs font-bold bg-amber-500 text-slate-950">Semua Konten</button>
+                <button onclick="filterCategory('module')" class="enc-cat-btn px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-slate-400 hover:text-white border border-slate-800">Modul Edukasi</button>
+                <button onclick="filterCategory('solvent')" class="enc-cat-btn px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-slate-400 hover:text-white border border-slate-800">Solvents (Pelarut)</button>
+                <button onclick="filterCategory('fixative')" class="enc-cat-btn px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-slate-400 hover:text-white border border-slate-800">Fixatives (Pengikat)</button>
+                <button onclick="filterCategory('carrier')" class="enc-cat-btn px-4 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-slate-400 hover:text-white border border-slate-800">Carrier Oils</button>
+            </div>
+
+            <!-- Content Grid -->
+            <div id="enc-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Items populated dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- ==================== TAB 4: JURNAL RESEP TERSIMPAN ==================== -->
+        <section id="sec-recipes" class="tab-content hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-2xl font-serif-title font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-box-archive text-amber-500"></i> Jurnal Resep Tersimpan
+                    </h2>
+                    <p class="text-slate-400 text-sm">Daftar formularium batch parfum yang pernah Anda simpan di browser ini.</p>
+                </div>
+            </div>
+
+            <div id="recipes-empty" class="text-center py-12 glass-card rounded-2xl p-8">
+                <i class="fa-solid fa-folder-open text-4xl text-slate-600 mb-3 block"></i>
+                <h3 class="text-lg font-bold text-slate-300">Belum Ada Resep Tersimpan</h3>
+                <p class="text-xs text-slate-500 mt-1 max-w-md mx-auto">Gunakan Kalkulator Dosis untuk meracik parfum dan klik tombol "Simpan Resep Ini" untuk mencatatnya di sini.</p>
+            </div>
+
+            <div id="recipes-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Saved recipes rendered here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="glass-card border-t border-slate-800 py-6 px-4 lg:px-8 text-center text-xs text-slate-500 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p>© 2026 AromaCraft App Prototype. Standard IFRA & Perfumery Formulation Engine.</p>
+            <p class="flex items-center gap-2">
+                <i class="fa-solid fa-globe text-amber-500"></i> prototype.aromacraft.app
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // ================= STATE MANAGEMENT =================
+        let currentCalcState = {
+            vol: 50,
+            oilPct: 20,
+            fixPct: 3,
+            waterPct: 2,
+            topPct: 30,
+            heartPct: 50,
+            basePct: 20,
+            type: "Eau de Parfum (EDP)"
+        };
+
+        let selectedQuiz = {
+            zodiac: "",
+            element: "",
+            loveLang: "",
+            vibe: "",
+            topNotes: "",
+            heartNotes: "",
+            baseNotes: "",
+            accordName: ""
+        };
+
+        // Database Material & Modul Edukasi
+        const materialsData = [
+            {
+                id: 'mod1',
+                name: "Modul 1: Dasar-dasar Kimia Aromatik & Olfactive Pyramid",
+                category: 'module',
+                density: 'Materi Edukasi',
+                desc: "Memahami struktur volatilitas molekul parfum. Pembagian konsentrasi Top Notes (ringan & menguap cepat), Heart Notes (karakter utama), dan Base Notes (molekul berat sebagai fondasi daya tahan).",
+                usage: "Tingkat Dasar",
+                badge: "Modul 1"
+            },
+            {
+                id: 'mod2',
+                name: "Modul 2: Teknik Blending, Solven, & Rasio Konsentrasi",
+                category: 'module',
+                density: 'Materi Edukasi',
+                desc: "Panduan pemilihan pelarut standar industri (Ethanol 96%, DPG, IPM) serta perhitungan rasio konsentrasi aman standar IFRA untuk Extrait, EDP, EDT, dan Eau de Cologne.",
+                usage: "Tingkat Menengah",
+                badge: "Modul 2"
+            },
+            {
+                id: 'mod3',
+                name: "Modul 3: Maserasi, Stabilisasi, & Quality Control",
+                category: 'module',
+                density: 'Materi Edukasi',
+                desc: "Prosedur penuaan racikan (mating/maserasi) pada suhu terstabilkan, penggunaan fixative pengikat jejak aroma (sillage), hingga teknik penyaringan akhir sebelum packaging.",
+                usage: "Tingkat Lanjut",
+                badge: "Modul 3"
+            },
+            {
+                id: 'eth96',
+                name: "Perfumer's Alcohol (Ethanol 96%)",
+                category: 'solvent',
+                density: '0.81 g/mL',
+                desc: "Pelarut standar industri perfumery. Menguap dengan cepat tanpa meninggalkan aroma residu berlebih, membantu proyeksitas top notes secara maksimal.",
+                usage: "60% - 85%",
+                badge: "Primary Solvent"
+            },
+            {
+                id: 'dpg',
+                name: "Dipropylene Glycol (DPG)",
+                category: 'solvent',
+                density: '1.02 g/mL',
+                desc: "Pelarut tanpa bau yang sempurna untuk racikan non-alkohol, minyak wangi roll-on, incense, dan dupa aromaterapi.",
+                usage: "10% - 50%",
+                badge: "Non-Alcoholic"
+            },
+            {
+                id: 'ipm',
+                name: "Isopropyl Myristate (IPM)",
+                category: 'solvent',
+                density: '0.85 g/mL',
+                desc: "Ester sintetis berbobot ringan yang mempercepat penyerapan minyak ke dalam kulit tanpa rasa lengket (dry-oil feel).",
+                usage: "2% - 10%",
+                badge: "Skin-Absorb Fast"
+            },
+            {
+                id: 'augeo',
+                name: "Augeo Clean Multi",
+                category: 'solvent',
+                density: '1.00 g/mL',
+                desc: "Pelarut ramah lingkungan berbahan dasar gliserin alami. Sangat stabil untuk racikan Reed Diffuser dan car freshener.",
+                usage: "70% - 85%",
+                badge: "Reed Diffuser"
+            },
+            {
+                id: 'glucam',
+                name: "Glucam P-20 (PPG-20 Glucose Ether)",
+                category: 'fixative',
+                density: '1.05 g/mL',
+                desc: "Pengikat aroma alami berbahan dasar jagung. Menahan evaporasi molekul volatile top & heart notes hingga 300% lebih lama di kulit.",
+                usage: "1% - 5%",
+                badge: "Natural Fixative"
+            },
+            {
+                id: 'ambroxan',
+                name: "Ambroxan / Ambrox Super",
+                category: 'fixative',
+                density: 'Kristal / Solusio',
+                desc: "Molekul pengganti Ambergris alami. Memberikan efek ambery, dry-woody, sensual, dan memperkuat sillage (jejak aroma).",
+                usage: "0.5% - 3%",
+                badge: "Sillage Booster"
+            },
+            {
+                id: 'isoesuper',
+                name: "Iso E Super",
+                category: 'fixative',
+                density: '0.96 g/mL',
+                desc: "Bahan aromatik sintetis beraroma kayu cedar beludru halus (velvety cedarwood). Memberikan efek 'aura' yang timbul tenggelam.",
+                usage: "2% - 20%",
+                badge: "Velvet Cedar"
+            },
+            {
+                id: 'jojoba',
+                name: "Golden Jojoba Oil",
+                category: 'carrier',
+                density: '0.86 g/mL',
+                desc: "Minyak pembawa alami yang strukturnya paling mirip dengan sebum kulit manusia. Sangat awet dan tidak mudah tengik.",
+                usage: "80% - 95%",
+                badge: "Attar / Oil Perfume"
+            }
+        ];
+
+        // ================= INITIALIZATION =================
+        document.addEventListener("DOMContentLoaded", () => {
+            calculateFormulation();
+            renderEncyclopedia(materialsData);
+            loadSavedRecipes();
+        });
+
+        // ================= TAB SWITCHING =================
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+
+            // Desktop active state
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-slate-950', 'shadow');
+                btn.classList.add('text-slate-300');
+            });
+            const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-amber-500', 'text-slate-950', 'shadow');
+                activeBtn.classList.remove('text-slate-300');
+            }
+        }
+
+        // ================= PRODUCT GUIDE SWITCHING =================
+        function switchProductGuide(prodId) {
+            document.querySelectorAll('.prod-guide-sec').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`psec-${prodId}`).classList.remove('hidden');
+
+            document.querySelectorAll('.prod-guide-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-slate-950', 'shadow');
+                btn.classList.add('bg-slate-900', 'text-slate-300');
+            });
+            const activeBtn = document.getElementById(`pbtn-${prodId}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-amber-500', 'text-slate-950', 'shadow');
+                activeBtn.classList.remove('bg-slate-900', 'text-slate-300');
+            }
+        }
+
+        // ================= KALKULATOR DOSIS LOGIC =================
+        function calculateFormulation() {
+            const vol = parseFloat(document.getElementById('input-vol').value);
+            const oilPct = parseFloat(document.getElementById('input-oil').value);
+            const fixPct = parseFloat(document.getElementById('input-fix').value);
+            const waterPct = parseFloat(document.getElementById('input-water').value);
+
+            let topPct = parseFloat(document.getElementById('input-top-pct').value);
+            let heartPct = parseFloat(document.getElementById('input-heart-pct').value);
+            let basePct = parseFloat(document.getElementById('input-base-pct').value);
+
+            // Normalize pyramid sum to 100%
+            const pyramidSum = topPct + heartPct + basePct;
+            topPct = Math.round((topPct / pyramidSum) * 100);
+            heartPct = Math.round((heartPct / pyramidSum) * 100);
+            basePct = 100 - topPct - heartPct;
+
+            // Alcohol = 100% - Oil% - Fixative% - Water%
+            const alcPct = Math.max(0, 100 - oilPct - fixPct - waterPct);
+
+            // Densities (g/mL)
+            const dOil = 0.95;
+            const dAlc = 0.81;
+            const dFix = 1.05;
+            const dWater = 1.00;
+
+            // Volumes (mL)
+            const mlOil = vol * (oilPct / 100);
+            const mlAlc = vol * (alcPct / 100);
+            const mlFix = vol * (fixPct / 100);
+            const mlWater = vol * (waterPct / 100);
+
+            // Grams
+            const gOil = mlOil * dOil;
+            const gAlc = mlAlc * dAlc;
+            const gFix = mlFix * dFix;
+            const gWater = mlWater * dWater;
+            const gTotal = gOil + gAlc + gFix + gWater;
+
+            // Pyramid breakdown
+            const mlTop = mlOil * (topPct / 100);
+            const mlHeart = mlOil * (heartPct / 100);
+            const mlBase = mlOil * (basePct / 100);
+
+            const gTop = mlTop * dOil;
+            const gHeart = mlHeart * dOil;
+            const gBase = mlBase * dOil;
+
+            // Determine Label Type
+            let typeLabel = "Custom Blend";
+            if (oilPct >= 25) typeLabel = `Extrait de Parfum (${oilPct}%)`;
+            else if (oilPct >= 15) typeLabel = `Eau de Parfum / EDP (${oilPct}%)`;
+            else if (oilPct >= 8) typeLabel = `Eau de Toilette / EDT (${oilPct}%)`;
+            else typeLabel = `Eau de Cologne / Body Splash (${oilPct}%)`;
+
+            // Update UI Labels
+            document.getElementById('val-target-vol').innerText = `${vol} mL`;
+            document.getElementById('val-oil-ratio').innerText = `${oilPct}% (${typeLabel.split(' ')[0]})`;
+            document.getElementById('val-fix-ratio').innerText = `${fixPct}%`;
+            document.getElementById('val-water-ratio').innerText = `${waterPct}%`;
+
+            document.getElementById('val-top-pct').innerText = `${topPct}%`;
+            document.getElementById('val-heart-pct').innerText = `${heartPct}%`;
+            document.getElementById('val-base-pct').innerText = `${basePct}%`;
+
+            document.getElementById('res-title-type').innerText = typeLabel;
+            document.getElementById('res-total-gram').innerText = `${gTotal.toFixed(2)} g`;
+            document.getElementById('res-comp-summary').innerText = `${oilPct}% Biang | ${alcPct}% Alkohol | ${fixPct}% Fixative | ${waterPct}% Air`;
+
+            // Update Bars
+            document.getElementById('bar-oil').style.width = `${oilPct}%`;
+            document.getElementById('bar-alcohol').style.width = `${alcPct}%`;
+            document.getElementById('bar-fix').style.width = `${fixPct}%`;
+            document.getElementById('bar-water').style.width = `${waterPct}%`;
+
+            // Update Rows
+            document.getElementById('row-oil-pct').innerText = `${oilPct}%`;
+            document.getElementById('row-oil-ml').innerText = `${mlOil.toFixed(1)} mL`;
+            document.getElementById('row-oil-g').innerText = `${gOil.toFixed(2)} g`;
+
+            document.getElementById('row-top-pct').innerText = `${topPct}% dari oil`;
+            document.getElementById('row-top-ml').innerText = `${mlTop.toFixed(1)} mL`;
+            document.getElementById('row-top-g').innerText = `${gTop.toFixed(2)} g`;
+
+            document.getElementById('row-heart-pct').innerText = `${heartPct}% dari oil`;
+            document.getElementById('row-heart-ml').innerText = `${mlHeart.toFixed(1)} mL`;
+            document.getElementById('row-heart-g').innerText = `${gHeart.toFixed(2)} g`;
+
+            document.getElementById('row-base-pct').innerText = `${basePct}% dari oil`;
+            document.getElementById('row-base-ml').innerText = `${mlBase.toFixed(1)} mL`;
+            document.getElementById('row-base-g').innerText = `${gBase.toFixed(2)} g`;
+
+            document.getElementById('row-alc-pct').innerText = `${alcPct}%`;
+            document.getElementById('row-alc-ml').innerText = `${mlAlc.toFixed(1)} mL`;
+            document.getElementById('row-alc-g').innerText = `${gAlc.toFixed(2)} g`;
+
+            document.getElementById('row-fix-pct').innerText = `${fixPct}%`;
+            document.getElementById('row-fix-ml').innerText = `${mlFix.toFixed(1)} mL`;
+            document.getElementById('row-fix-g').innerText = `${gFix.toFixed(2)} g`;
+
+            document.getElementById('row-water-pct').innerText = `${waterPct}%`;
+            document.getElementById('row-water-ml').innerText = `${mlWater.toFixed(1)} mL`;
+            document.getElementById('row-water-g').innerText = `${gWater.toFixed(2)} g`;
+
+            // Update State
+            currentCalcState = { vol, oilPct, fixPct, waterPct, topPct, heartPct, basePct, type: typeLabel, gTotal };
+        }
+
+        function presetFormula(type) {
+            if (type === 'ext') {
+                document.getElementById('input-oil').value = 30;
+                document.getElementById('input-fix').value = 4;
+            } else if (type === 'edp') {
+                document.getElementById('input-oil').value = 20;
+                document.getElementById('input-fix').value = 3;
+            } else if (type === 'edt') {
+                document.getElementById('input-oil').value = 12;
+                document.getElementById('input-fix').value = 2;
+            }
+            calculateFormulation();
+        }
+
+        // ================= QUIZ ENGINE LOGIC =================
+        function selectZodiac(zodiac, element) {
+            selectedQuiz.zodiac = zodiac;
+            selectedQuiz.element = element;
+            document.getElementById('quiz-step-1').classList.add('hidden');
+            document.getElementById('quiz-step-2').classList.remove('hidden');
+        }
+
+        function selectLoveLang(loveLang) {
+            selectedQuiz.loveLang = loveLang;
+            document.getElementById('quiz-step-2').classList.add('hidden');
+            document.getElementById('quiz-step-3').classList.remove('hidden');
+        }
+
+        function finishQuiz(vibe) {
+            selectedQuiz.vibe = vibe;
+            document.getElementById('quiz-step-3').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+
+            // Default Formula (Air / Generic)
+            let accordName = "Celestial Amber & Cozy Vanilla";
+            let topN = "Bergamot FCF, Pink Pepper, Mandarine";
+            let heartN = "French Lavender, Jasmine Sambac, Cashmeran";
+            let baseN = "Ambroxan, Madagascar Vanilla, Sandalwood";
+
+            if (selectedQuiz.element === 'Fire') {
+                accordName = "Spiced Amber & Crimson Citrus";
+                topN = "Blood Orange, Black Pepper, Cardamom";
+                heartN = "Cinnamon Bark, Rose Absolute, Nutmeg";
+                baseN = "Oud, Cedarwood, AmberXan";
+            } else if (selectedQuiz.element === 'Earth') {
+                accordName = "Cozy Sandalwood & Earthy Fig";
+                topN = "Green Tea, Bergamot, Fig Leaf";
+                heartN = "Iris Butter, Vetiver Bourbon, Cedar Leaf";
+                baseN = "Mysore Sandalwood, Oakmoss, Clean Musk";
+            } else if (selectedQuiz.element === 'Water') {
+                accordName = "Oceanic Aquatic & White Musk";
+                topN = "Sea Salt, Lemon Zest, Calone";
+                heartN = "Water Lily, Neroli, Sage";
+                baseN = "Ambroxan, Driftwood, White Amber";
+            }
+
+            selectedQuiz.accordName = accordName;
+            selectedQuiz.topNotes = topN;
+            selectedQuiz.heartNotes = heartN;
+            selectedQuiz.baseNotes = baseN;
+
+            document.getElementById('res-accord-name').innerText = accordName;
+            document.getElementById('res-accord-desc').innerText = `Dibuat khusus untuk Zodiak ${selectedQuiz.zodiac} (${selectedQuiz.element}), Love Language ${selectedQuiz.loveLang}, serta vibe ${vibe}.`;
+            document.getElementById('res-top-notes').innerText = topN;
+            document.getElementById('res-heart-notes').innerText = heartN;
+            document.getElementById('res-base-notes').innerText = baseN;
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-step-1').classList.remove('hidden');
+        }
+
+        function importToCalculator() {
+            switchTab('calculator');
+            presetFormula('edp');
+
+            // Tambahkan rincian detail nama bahan aromatik ke tabel kalkulator
+            if (selectedQuiz.topNotes) {
+                document.getElementById('desc-top-notes').innerHTML = `<strong>Bahan:</strong> ${selectedQuiz.topNotes}`;
+                document.getElementById('desc-heart-notes').innerHTML = `<strong>Bahan:</strong> ${selectedQuiz.heartNotes}`;
+                document.getElementById('desc-base-notes').innerHTML = `<strong>Bahan:</strong> ${selectedQuiz.baseNotes}`;
+                document.getElementById('res-title-type').innerText = `EDP (20%) - ${selectedQuiz.accordName}`;
+            }
+
+            alert(`Formula Scent Matcher (${selectedQuiz.accordName}) beserta rincian Top, Heart, dan Base Notes berhasil diimpor ke Kalkulator!`);
+        }
+
+        // ================= ENSIKLOPEDIA LOGIC =================
+        function renderEncyclopedia(data) {
+            const container = document.getElementById('enc-grid');
+            container.innerHTML = '';
+
+            data.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "glass-card p-5 rounded-2xl border border-slate-800 space-y-3 hover:border-amber-500/40 transition";
+                card.innerHTML = `
+                    <div class="flex items-start justify-between gap-2">
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20">${item.badge}</span>
+                        <span class="text-xs text-slate-500 font-mono">${item.density}</span>
+                    </div>
+                    <h3 class="font-bold text-slate-100 text-base font-serif-title">${item.name}</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">${item.desc}</p>
+                    <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500">${item.category === 'module' ? 'Tingkat:' : 'Rekomendasi Dosis:'}</span>
+                        <span class="font-bold text-emerald-400">${item.usage}</span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterEncyclopedia() {
+            const q = document.getElementById('enc-search').value.toLowerCase();
+            const filtered = materialsData.filter(m => m.name.toLowerCase().includes(q) || m.desc.toLowerCase().includes(q));
+            renderEncyclopedia(filtered);
+        }
+
+        function filterCategory(cat) {
+            document.querySelectorAll('.enc-cat-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-slate-950');
+                btn.classList.add('bg-slate-900', 'text-slate-400');
+            });
+            event.target.classList.add('bg-amber-500', 'text-slate-950');
+            event.target.classList.remove('bg-slate-900', 'text-slate-400');
+
+            if (cat === 'all') renderEncyclopedia(materialsData);
+            else renderEncyclopedia(materialsData.filter(m => m.category === cat));
+        }
+
+        // ================= RECIPE JOURNAL LOCALSTORAGE =================
+        function saveCurrentRecipe() {
+            const recipeName = prompt("Masukkan nama resep racikan ini:", `${currentCalcState.type} - ${currentCalcState.vol}mL`);
+            if (!recipeName) return;
+
+            const recipes = JSON.parse(localStorage.getItem('aromacraft_recipes') || '[]');
+            const newRecipe = {
+                id: Date.now(),
+                name: recipeName,
+                date: new Date().toLocaleDateString('id-ID'),
+                ...currentCalcState
+            };
+            recipes.push(newRecipe);
+            localStorage.setItem('aromacraft_recipes', JSON.stringify(recipes));
+            alert("Resep berhasil disimpan di Jurnal!");
+            loadSavedRecipes();
+        }
+
+        function loadSavedRecipes() {
+            const recipes = JSON.parse(localStorage.getItem('aromacraft_recipes') || '[]');
+            const container = document.getElementById('recipes-grid');
+            const emptyState = document.getElementById('recipes-empty');
+
+            if (recipes.length === 0) {
+                emptyState.classList.remove('hidden');
+                container.innerHTML = '';
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            container.innerHTML = '';
+
+            recipes.forEach(r => {
+                const card = document.createElement('div');
+                card.className = "glass-card p-5 rounded-2xl border border-slate-800 space-y-3";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-slate-500">${r.date}</span>
+                        <button onclick="deleteRecipe(${r.id})" class="text-xs text-rose-400 hover:text-rose-300"><i class="fa-solid fa-trash"></i> Hapus</button>
+                    </div>
+                    <h3 class="font-bold text-slate-100 text-base font-serif-title">${r.name}</h3>
+                    <div class="text-xs text-slate-300 space-y-1 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                        <div class="flex justify-between"><span>Volume Total:</span><span class="font-bold text-amber-400">${r.vol} mL</span></div>
+                        <div class="flex justify-between"><span>Biang Parfum:</span><span>${r.oilPct}%</span></div>
+                        <div class="flex justify-between"><span>Pengikat (Fixative):</span><span>${r.fixPct}%</span></div>
+                        <div class="flex justify-between"><span>Massa Total:</span><span class="font-bold text-emerald-400">${r.gTotal ? r.gTotal.toFixed(2) : '-'} g</span></div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function deleteRecipe(id) {
+            let recipes = JSON.parse(localStorage.getItem('aromacraft_recipes') || '[]');
+            recipes = recipes.filter(r => r.id !== id);
+            localStorage.setItem('aromacraft_recipes', JSON.stringify(recipes));
+            loadSavedRecipes();
+        }
+    </script>
+</body>
+</html>
