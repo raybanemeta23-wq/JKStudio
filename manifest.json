@@ -2,24 +2,37 @@
   "name": "AromaCraft - Interactive Perfumery Suite",
   "short_name": "AromaCraft",
   "description": "Panduan meracik, kalkulator dosis, scent matcher, ensiklopedia solven, dan jurnal resep parfum.",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "https://raybanemeta23-wq.github.io/JKStudio/index.html",
+  "scope": "https://raybanemeta23-wq.github.io/JKStudio/",
+  "id": "https://raybanemeta23-wq.github.io/JKStudio/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#090d12",
   "theme_color": "#0f172a",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "https://raybanemeta23-wq.github.io/JKStudio/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "https://raybanemeta23-wq.github.io/JKStudio/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://raybanemeta23-wq.github.io/JKStudio/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "https://raybanemeta23-wq.github.io/JKStudio/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
